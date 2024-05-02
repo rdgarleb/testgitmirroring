@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ASCII"?>
+<de.visualrules.base.rule:FlowRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.visualrules.base="http:///de/visualrules/base.ecore" xmlns:de.visualrules.base.context="http:///de/visualrules/base/context.ecore" xmlns:de.visualrules.base.flow="http:///de/visualrules/base/flow.ecore" xmlns:de.visualrules.base.rule="http:///de/visualrules/base/rule.ecore" xmlns:de.visualrules.webservice="http:///de/visualrules/webservice.ecore" xmi:id="_X5o9wAjIEe-Cn5Xcc92jtg" name="prueba" metamodelVersion="37" id="0">
+  <parameterGroup xmi:id="_X5o9wQjIEe-Cn5Xcc92jtg">
+    <elements xsi:type="de.visualrules.base.context:Parameter" xmi:id="_X5o9wgjIEe-Cn5Xcc92jtg" name="Funciona" typeName="Boolean" output="false" required="false"/>
+    <elements xsi:type="de.visualrules.base.context:Parameter" xmi:id="_X5o9wwjIEe-Cn5Xcc92jtg" name="Respuesta" typeName="String" input="false" required="false"/>
+  </parameterGroup>
+  <ruleEnvironmentConfigurations xsi:type="de.visualrules.webservice:WebServiceRuleEnvironmentConfiguration" xmi:id="_X5o9xAjIEe-Cn5Xcc92jtg" generateWsdlOperation="true">
+    <environment href="visualrules:/webservice/#WebService"/>
+  </ruleEnvironmentConfigurations>
+  <successors xsi:type="de.visualrules.base.flow:ExpressionDecision" xmi:id="_X5o9xQjIEe-Cn5Xcc92jtg" id="1">
+    <successors xsi:type="de.visualrules.base.flow:ExpressionCaseBlock" xmi:id="_X5o9xgjIEe-Cn5Xcc92jtg" id="2">
+      <successors xsi:type="de.visualrules.base.flow:Manipulations" xmi:id="_X5o9xwjIEe-Cn5Xcc92jtg" id="4">
+        <manipulations xsi:type="de.visualrules.base.flow:SubstituteAssignment" xmi:id="_X5o9yAjIEe-Cn5Xcc92jtg">
+          <identifier xmi:id="_X5o9yQjIEe-Cn5Xcc92jtg" text="Respuesta"/>
+          <value xsi:type="de.visualrules.base.context:ExpressionValue" xmi:id="_X5o9zAjIEe-Cn5Xcc92jtg">
+            <expression xmi:id="_X5o9zQjIEe-Cn5Xcc92jtg" text="&quot;Si sirve&quot;"/>
+          </value>
+        </manipulations>
+      </successors>
+      <condition xmi:id="_X5o9zgjIEe-Cn5Xcc92jtg" text="=TRUE" prefix="_X5o92AjIEe-Cn5Xcc92jtg"/>
+    </successors>
+    <successors xsi:type="de.visualrules.base.flow:ExpressionElseBlock" xmi:id="_X5o9zwjIEe-Cn5Xcc92jtg" id="3">
+      <informations xsi:type="de.visualrules.base:Description" xmi:id="_X5o90AjIEe-Cn5Xcc92jtg" text="=FALSE" language="en"/>
+      <successors xsi:type="de.visualrules.base.flow:Manipulations" xmi:id="_X5o90QjIEe-Cn5Xcc92jtg" id="5">
+        <manipulations xsi:type="de.visualrules.base.flow:SubstituteAssignment" xmi:id="_X5o90gjIEe-Cn5Xcc92jtg">
+          <identifier xmi:id="_X5o90wjIEe-Cn5Xcc92jtg" text="Respuesta"/>
+          <value xsi:type="de.visualrules.base.context:ExpressionValue" xmi:id="_X5o91gjIEe-Cn5Xcc92jtg">
+            <expression xmi:id="_X5o91wjIEe-Cn5Xcc92jtg" text="&quot;No sirve&quot;"/>
+          </value>
+        </manipulations>
+      </successors>
+    </successors>
+    <prefix xmi:id="_X5o92AjIEe-Cn5Xcc92jtg" text="Funciona"/>
+  </successors>
+  <flowType href="visualrules:/base/#FTStandard"/>
+</de.visualrules.base.rule:FlowRule>
