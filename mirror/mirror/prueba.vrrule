@@ -3,6 +3,7 @@
   <parameterGroup xmi:id="_X5o9wQjIEe-Cn5Xcc92jtg">
     <elements xsi:type="de.visualrules.base.context:Parameter" xmi:id="_X5o9wgjIEe-Cn5Xcc92jtg" name="Funciona" typeName="Boolean" output="false" required="false"/>
     <elements xsi:type="de.visualrules.base.context:Parameter" xmi:id="_X5o9wwjIEe-Cn5Xcc92jtg" name="Respuesta" typeName="String" input="false" required="false"/>
+    <elements xsi:type="de.visualrules.base.context:Parameter" xmi:id="_99J7sAjJEe-Cn5Xcc92jtg" name="Prueba" typeName="Boolean" output="false"/>
   </parameterGroup>
   <ruleEnvironmentConfigurations xsi:type="de.visualrules.webservice:WebServiceRuleEnvironmentConfiguration" xmi:id="_X5o9xAjIEe-Cn5Xcc92jtg" generateWsdlOperation="true">
     <environment href="visualrules:/webservice/#WebService"/>
@@ -10,6 +11,23 @@
   <successors xsi:type="de.visualrules.base.flow:ExpressionDecision" xmi:id="_X5o9xQjIEe-Cn5Xcc92jtg" id="1">
     <successors xsi:type="de.visualrules.base.flow:ExpressionCaseBlock" xmi:id="_X5o9xgjIEe-Cn5Xcc92jtg" id="2">
       <successors xsi:type="de.visualrules.base.flow:Manipulations" xmi:id="_X5o9xwjIEe-Cn5Xcc92jtg" id="4">
+        <successors xsi:type="de.visualrules.base.flow:ExpressionDecision" xmi:id="_4y3oIAjJEe-Cn5Xcc92jtg" id="12">
+          <successors xsi:type="de.visualrules.base.flow:ExpressionCaseBlock" xmi:id="_4y42QAjJEe-Cn5Xcc92jtg" id="13">
+            <successors xsi:type="de.visualrules.base.flow:Manipulations" xmi:id="_BfuDgAjKEe-Cn5Xcc92jtg" id="15">
+              <manipulations xsi:type="de.visualrules.base.flow:SubstituteAssignment" xmi:id="_BfuDgQjKEe-Cn5Xcc92jtg">
+                <identifier xmi:id="_BfuDggjKEe-Cn5Xcc92jtg" text="Respuesta"/>
+                <value xsi:type="de.visualrules.base.context:ExpressionValue" xmi:id="_Go_DYAjKEe-Cn5Xcc92jtg">
+                  <expression xmi:id="_Go_DYQjKEe-Cn5Xcc92jtg" text="&quot;Git si sirve para el MH&quot;"/>
+                </value>
+              </manipulations>
+            </successors>
+            <condition xmi:id="_4y42QQjJEe-Cn5Xcc92jtg" text="=True" prefix="_4y3oIQjJEe-Cn5Xcc92jtg"/>
+          </successors>
+          <successors xsi:type="de.visualrules.base.flow:ExpressionElseBlock" xmi:id="_4y42QgjJEe-Cn5Xcc92jtg" id="14">
+            <informations xsi:type="de.visualrules.base:Description" xmi:id="_A3eXwAjKEe-Cn5Xcc92jtg" text="=False" language="en"/>
+          </successors>
+          <prefix xmi:id="_4y3oIQjJEe-Cn5Xcc92jtg" text="Prueba"/>
+        </successors>
         <manipulations xsi:type="de.visualrules.base.flow:SubstituteAssignment" xmi:id="_X5o9yAjIEe-Cn5Xcc92jtg">
           <identifier xmi:id="_X5o9yQjIEe-Cn5Xcc92jtg" text="Respuesta"/>
           <value xsi:type="de.visualrules.base.context:ExpressionValue" xmi:id="_X5o9zAjIEe-Cn5Xcc92jtg">
