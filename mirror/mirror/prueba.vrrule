@@ -25,6 +25,14 @@
           </successors>
           <successors xsi:type="de.visualrules.base.flow:ExpressionElseBlock" xmi:id="_4y42QgjJEe-Cn5Xcc92jtg" id="14">
             <informations xsi:type="de.visualrules.base:Description" xmi:id="_A3eXwAjKEe-Cn5Xcc92jtg" text="=False" language="en"/>
+            <successors xsi:type="de.visualrules.base.flow:Manipulations" xmi:id="_chFs8AlrEe-y9um586X3xw" id="16">
+              <manipulations xsi:type="de.visualrules.base.flow:SubstituteAssignment" xmi:id="_chFs8QlrEe-y9um586X3xw">
+                <identifier xmi:id="_chFs8glrEe-y9um586X3xw" text="Respuesta"/>
+                <value xsi:type="de.visualrules.base.context:ExpressionValue" xmi:id="_e747cAlrEe-y9um586X3xw">
+                  <expression xmi:id="_e747cQlrEe-y9um586X3xw" text=" &quot;todo es falso&quot;"/>
+                </value>
+              </manipulations>
+            </successors>
           </successors>
           <prefix xmi:id="_4y3oIQjJEe-Cn5Xcc92jtg" text="Prueba"/>
         </successors>
