@@ -4,6 +4,7 @@
     <elements xsi:type="de.visualrules.base.context:Parameter" xmi:id="_X5o9wgjIEe-Cn5Xcc92jtg" name="Funciona" typeName="Boolean" output="false" required="false"/>
     <elements xsi:type="de.visualrules.base.context:Parameter" xmi:id="_X5o9wwjIEe-Cn5Xcc92jtg" name="Respuesta" typeName="String" input="false" required="false"/>
     <elements xsi:type="de.visualrules.base.context:Parameter" xmi:id="_99J7sAjJEe-Cn5Xcc92jtg" name="Prueba" typeName="Boolean" output="false"/>
+    <elements xsi:type="de.visualrules.base.context:Parameter" xmi:id="_0AwzgAvIEe-d64s2DPMMkA" name="Respuesta2" typeName="String" input="false" required="false"/>
   </parameterGroup>
   <ruleEnvironmentConfigurations xsi:type="de.visualrules.webservice:WebServiceRuleEnvironmentConfiguration" xmi:id="_X5o9xAjIEe-Cn5Xcc92jtg" generateWsdlOperation="true">
     <environment href="visualrules:/webservice/#WebService"/>
@@ -15,9 +16,9 @@
           <successors xsi:type="de.visualrules.base.flow:ExpressionCaseBlock" xmi:id="_4y42QAjJEe-Cn5Xcc92jtg" id="13">
             <successors xsi:type="de.visualrules.base.flow:Manipulations" xmi:id="_BfuDgAjKEe-Cn5Xcc92jtg" id="15">
               <manipulations xsi:type="de.visualrules.base.flow:SubstituteAssignment" xmi:id="_BfuDgQjKEe-Cn5Xcc92jtg">
-                <identifier xmi:id="_BfuDggjKEe-Cn5Xcc92jtg" text="Respuesta"/>
+                <identifier xmi:id="_BfuDggjKEe-Cn5Xcc92jtg" text="Respuesta2"/>
                 <value xsi:type="de.visualrules.base.context:ExpressionValue" xmi:id="_Go_DYAjKEe-Cn5Xcc92jtg">
-                  <expression xmi:id="_Go_DYQjKEe-Cn5Xcc92jtg" text="&quot;Git si sirve para el MH&quot;"/>
+                  <expression xmi:id="_Go_DYQjKEe-Cn5Xcc92jtg" text=" &quot;Git si sirve para el MH&quot;"/>
                 </value>
               </manipulations>
             </successors>
@@ -27,7 +28,7 @@
             <informations xsi:type="de.visualrules.base:Description" xmi:id="_A3eXwAjKEe-Cn5Xcc92jtg" text="=False" language="en"/>
             <successors xsi:type="de.visualrules.base.flow:Manipulations" xmi:id="_chFs8AlrEe-y9um586X3xw" id="16">
               <manipulations xsi:type="de.visualrules.base.flow:SubstituteAssignment" xmi:id="_chFs8QlrEe-y9um586X3xw">
-                <identifier xmi:id="_chFs8glrEe-y9um586X3xw" text="Respuesta"/>
+                <identifier xmi:id="_chFs8glrEe-y9um586X3xw" text="Respuesta2"/>
                 <value xsi:type="de.visualrules.base.context:ExpressionValue" xmi:id="_e747cAlrEe-y9um586X3xw">
                   <expression xmi:id="_e747cQlrEe-y9um586X3xw" text=" &quot;todo es falso&quot;"/>
                 </value>
